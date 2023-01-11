@@ -1,0 +1,32 @@
+ALGORITHM long
+VAR
+    const,voy,i,som,n:INTEGER
+    statment:STRING
+    i:INTEGER
+BEGIN
+    REPEAT
+        write("wirte a statment")
+        READ(statment)
+        n:=len(statment)
+    UNTIL (statment(n)===".")
+    som:=0
+    voy:=0
+    const:=0
+FOR i FROM 1 TO n   DO
+   IF (statement[i]===" ") THEN
+   som:=som+1
+   END_IF
+   SWITCH (statment[i]) DO
+    case "a" : voy:=voy+1
+    case "e" : voy:=voy+1
+    case "i" : voy:=voy+1
+    case "u" : voy:=voy+1
+    case "o" : voy:=voy+1
+    case "y" : voy:=voy+1
+    default : const:=const+1
+   END_SWITCH
+
+END_FOR
+    write ("The number of words in the sentence is",som)
+    write("The number of vowels in the sentence is",voy)
+END
